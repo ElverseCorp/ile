@@ -1,0 +1,6 @@
+[submodule "external/linki"]
+	path = external/linki
+	url = https://github.com/TheProjectL/linki
+[submodule "external/llibs"]
+	path = external/llibs
+	url = https://github.com/TheProjectL/llibs
