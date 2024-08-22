@@ -1,5 +1,6 @@
-#include <cgi.h>
+#include <cgi.h> // cgi mirror header
 
-int main() {
-    
+/* CGI entry point */
+int main(void) {
+    return cgi_main();
 }
