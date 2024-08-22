@@ -6,10 +6,18 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: ile
+# Project: Ile
 # Configurations: Debug
 # =============================================================================
 # =============================================================================
+
+#############################################
+# Rule for running custom commands.
+
+rule CUSTOM_COMMAND
+  command = $COMMAND
+  description = $DESC
+
 
 #############################################
 # Rule for compiling C files.
@@ -31,18 +39,10 @@ rule C_EXECUTABLE_LINKER__ile_Debug
 
 
 #############################################
-# Rule for running custom commands.
-
-rule CUSTOM_COMMAND
-  command = $COMMAND
-  description = $DESC
-
-
-#############################################
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Projects\mipt\ile -BC:\Projects\mipt\ile\build
+  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Projects\ile -BC:\Projects\ile\build
   description = Re-running CMake...
   generator = 1
 

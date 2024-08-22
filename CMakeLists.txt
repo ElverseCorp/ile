@@ -1,21 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(ile)
+project("Ile")
 
-# Options
-set(CMAKE_C_STANDARD 11)
-
-
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release)
-endif()
-
-set(CMAKE_CXX_FLAGS "-Wall -Wextra")
-set(CMAKE_CXX_FLAGS_DEBUG "-g")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3")
-
-
-# Build 
-include_directories(include/)
-file(GLOB_RECURSE ILE_SRC_FILES "src/*.c")
-
-add_executable(ile ${ILE_SRC_FILES})
+add_subdirectory(launcher/)
+add_subdirectory(cgi/)

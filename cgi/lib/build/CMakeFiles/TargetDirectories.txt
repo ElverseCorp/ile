@@ -1,0 +1,3 @@
+C:/Projects/ile/cgi/lib/build/CMakeFiles/cgi.dir
+C:/Projects/ile/cgi/lib/build/CMakeFiles/edit_cache.dir
+C:/Projects/ile/cgi/lib/build/CMakeFiles/rebuild_cache.dir

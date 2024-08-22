@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Projects/ile/build",
+  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -IC:/Projects/ile/include -g -std=gnu11 -o CMakeFiles\\ile.dir\\src\\ile.c.obj -c C:\\Projects\\ile\\src\\ile.c",
+  "file": "C:\\Projects\\ile\\src\\ile.c",
+  "output": "CMakeFiles\\ile.dir\\src\\ile.c.obj"
+},
+{
+  "directory": "C:/Projects/ile/build",
+  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -IC:/Projects/ile/include -g -std=gnu11 -o CMakeFiles\\ile.dir\\src\\main.c.obj -c C:\\Projects\\ile\\src\\main.c",
+  "file": "C:\\Projects\\ile\\src\\main.c",
+  "output": "CMakeFiles\\ile.dir\\src\\main.c.obj"
+}
+]
