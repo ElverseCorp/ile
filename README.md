@@ -1,5 +1,7 @@
 # Ile calculator of mathematical expressions / (MIPT, part of the L project)
 
+![Ile logo](.github/ile-logo.jpg "Ile Logo")
+
 ## Brief information
 
 * Application written in C (2011)
