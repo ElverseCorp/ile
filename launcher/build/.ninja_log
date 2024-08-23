@@ -1,4 +1,4 @@
 # ninja log v6
-3	42	7460352724634457	CMakeFiles/ile.dir/src/ile.c.obj	1b23b962e0ee6552
-6	45	7460352724666304	CMakeFiles/ile.dir/src/main.c.obj	ce0cde4a0696a7b6
-46	137	7460352725059039	ile.exe	464471be034c49e4
+1	38	7460439916798092	CMakeFiles/ile.dir/src/ile.c.obj	f66c380ebca41ef
+5	44	7460439916828127	CMakeFiles/ile.dir/src/main.c.obj	3a9dbd2f412b3762
+44	106	7460439917228118	ile.exe	9cd557e66e99d449

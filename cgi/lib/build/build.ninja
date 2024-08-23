@@ -51,10 +51,31 @@ build cmake_object_order_depends_target_cgi: phony || .
 
 build CMakeFiles/cgi.dir/src/cgi.c.obj: C_COMPILER__cgi_unscanned_Debug C$:/Projects/ile/cgi/lib/src/cgi.c || cmake_object_order_depends_target_cgi
   DEP_FILE = CMakeFiles\cgi.dir\src\cgi.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11
   INCLUDES = -IC:/Projects/ile/cgi/lib/include
   OBJECT_DIR = CMakeFiles\cgi.dir
   OBJECT_FILE_DIR = CMakeFiles\cgi.dir\src
+
+build CMakeFiles/cgi.dir/src/solver/lexer.c.obj: C_COMPILER__cgi_unscanned_Debug C$:/Projects/ile/cgi/lib/src/solver/lexer.c || cmake_object_order_depends_target_cgi
+  DEP_FILE = CMakeFiles\cgi.dir\src\solver\lexer.c.obj.d
+  FLAGS = -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11
+  INCLUDES = -IC:/Projects/ile/cgi/lib/include
+  OBJECT_DIR = CMakeFiles\cgi.dir
+  OBJECT_FILE_DIR = CMakeFiles\cgi.dir\src\solver
+
+build CMakeFiles/cgi.dir/src/solver/parser.c.obj: C_COMPILER__cgi_unscanned_Debug C$:/Projects/ile/cgi/lib/src/solver/parser.c || cmake_object_order_depends_target_cgi
+  DEP_FILE = CMakeFiles\cgi.dir\src\solver\parser.c.obj.d
+  FLAGS = -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11
+  INCLUDES = -IC:/Projects/ile/cgi/lib/include
+  OBJECT_DIR = CMakeFiles\cgi.dir
+  OBJECT_FILE_DIR = CMakeFiles\cgi.dir\src\solver
+
+build CMakeFiles/cgi.dir/src/solver/solver.c.obj: C_COMPILER__cgi_unscanned_Debug C$:/Projects/ile/cgi/lib/src/solver/solver.c || cmake_object_order_depends_target_cgi
+  DEP_FILE = CMakeFiles\cgi.dir\src\solver\solver.c.obj.d
+  FLAGS = -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11
+  INCLUDES = -IC:/Projects/ile/cgi/lib/include
+  OBJECT_DIR = CMakeFiles\cgi.dir
+  OBJECT_FILE_DIR = CMakeFiles\cgi.dir\src\solver
 
 
 # =============================================================================
@@ -64,8 +85,8 @@ build CMakeFiles/cgi.dir/src/cgi.c.obj: C_COMPILER__cgi_unscanned_Debug C$:/Proj
 #############################################
 # Link the static library libcgi.a
 
-build libcgi.a: C_STATIC_LIBRARY_LINKER__cgi_Debug CMakeFiles/cgi.dir/src/cgi.c.obj
-  LANGUAGE_COMPILE_FLAGS = -g
+build libcgi.a: C_STATIC_LIBRARY_LINKER__cgi_Debug CMakeFiles/cgi.dir/src/cgi.c.obj CMakeFiles/cgi.dir/src/solver/lexer.c.obj CMakeFiles/cgi.dir/src/solver/parser.c.obj CMakeFiles/cgi.dir/src/solver/solver.c.obj
+  LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -pedantic -g;-DDEBUG
   OBJECT_DIR = CMakeFiles\cgi.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

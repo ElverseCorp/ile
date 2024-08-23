@@ -1,0 +1,115 @@
+/* Include specific libraries */
+#include <lexer.h>
+
+/*************************************************************
+ * Private functions and data... (static)
+ ************************************************************/
+
+#include <stdint.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+
+#define MULTI(a) (unsigned)(a)
+
+#define IS_EOF(a) (bool)(a == NULL)
+#define IS_DIGIT(a) (bool)('0' <= a  && a <= '9')
+#define IS_ID(a) (bool)(('a' <= a  && a <= 'z') || ('A' <= a  && a <= 'Z'))
+
+/* Operators buffer */
+
+char op_map[] = {
+    [ILE_TOKEN_EQ]      = '=',
+    [ILE_TOKEN_PLUS]    = '+',
+    [ILE_TOKEN_MINUS]   = '-',
+    [ILE_TOKEN_MUL]     = '*',
+    [ILE_TOKEN_DIV]     = '/',
+    [ILE_TOKEN_COLON]   = ':',
+};
+#define ILE_OP_MAP_SIZE (int)(6)
+
+ile_token_type_t token_op_get(char sym) {
+    ile_token_type_t token_type = ILE_TOKEN_INVALID;
+    for (uint8_t i = 0; i < ILE_OP_MAP_SIZE; ++i) {
+        if (sym  = op_map[i]) {
+            token_type = (ile_token_type_t)(i);
+            break;
+        }
+    }
+    return token_type;
+}
+
+/* Checks Russian and Latin symbols */
+ile_token_t token_multibyte_id(char* str) {
+    /* 2 bytes seq */
+	if (((*str) & 0xE0) == 0xC0){
+        
+    }
+
+	/* 3 bytes seq */
+	if (((*str) & 0xF0) == 0xE0){
+
+    }
+
+	/* 4 bytes seq */
+	if (((*str) & 0xF8) == 0xF0){
+
+    }
+}
+
+/*************************************************************
+ * Public functions 
+ ************************************************************/
+
+#include <string.h>
+
+ile_lexer_status_t token_get(char* str, ile_token_t** buffer) {
+
+    /* Initialize symbol table */
+
+    ile_token_t token = ILE_INIT_TOKEN();
+    ile_lexer_status_t status = ILE_LEXER_OK;
+    size_t token_index = 0;
+
+    while (!IS_EOF((*str))) {
+
+
+    /*************************************************************
+     * UTF-8 parse
+     ************************************************************/
+
+        /* 1 byte (all symbols, except some var names, must be here ->) */
+        if (((*str) & 0x80) == 0) {
+            if (IS_DIGIT((*str))) {
+                // Parse numbers
+            } else {
+                if (IS_ID((*str))) {
+                    // add to symbols table 
+                    ++token_index;
+                } else {
+                    token.type = ile_token_op_get(*str);
+                    if (token.type != ILE_TOKEN_INVALID) {
+                        buffer[token_index]->type = token.type;
+                        ++token_index;
+                    } else {
+                        // Stop parsing
+                        status = ILE_LEXER_INVALID_CHARACTER;
+                        break;
+                    }
+                }
+            }
+        }
+
+        /* -------------- Mulibyte symbol names  -------------- */
+
+        token = token_multibyte_id(str);
+        if (token.type != ILE_TOKEN_INVALID) {
+            (*buffer[token_index]) = token;
+            ++token_index;
+        } else {
+            status = ILE_LEXER_INVALID_CHARACTER;
+            break;
+        }
+    }
+    return status;
+}

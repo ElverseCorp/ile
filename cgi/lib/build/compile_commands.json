@@ -1,8 +1,26 @@
 [
 {
   "directory": "C:/Projects/ile/cgi/lib/build",
-  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -IC:/Projects/ile/cgi/lib/include -g -std=gnu11 -o CMakeFiles\\cgi.dir\\src\\cgi.c.obj -c C:\\Projects\\ile\\cgi\\lib\\src\\cgi.c",
+  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -IC:/Projects/ile/cgi/lib/include -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11 -o CMakeFiles\\cgi.dir\\src\\cgi.c.obj -c C:\\Projects\\ile\\cgi\\lib\\src\\cgi.c",
   "file": "C:\\Projects\\ile\\cgi\\lib\\src\\cgi.c",
   "output": "CMakeFiles\\cgi.dir\\src\\cgi.c.obj"
+},
+{
+  "directory": "C:/Projects/ile/cgi/lib/build",
+  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -IC:/Projects/ile/cgi/lib/include -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11 -o CMakeFiles\\cgi.dir\\src\\solver\\lexer.c.obj -c C:\\Projects\\ile\\cgi\\lib\\src\\solver\\lexer.c",
+  "file": "C:\\Projects\\ile\\cgi\\lib\\src\\solver\\lexer.c",
+  "output": "CMakeFiles\\cgi.dir\\src\\solver\\lexer.c.obj"
+},
+{
+  "directory": "C:/Projects/ile/cgi/lib/build",
+  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -IC:/Projects/ile/cgi/lib/include -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11 -o CMakeFiles\\cgi.dir\\src\\solver\\parser.c.obj -c C:\\Projects\\ile\\cgi\\lib\\src\\solver\\parser.c",
+  "file": "C:\\Projects\\ile\\cgi\\lib\\src\\solver\\parser.c",
+  "output": "CMakeFiles\\cgi.dir\\src\\solver\\parser.c.obj"
+},
+{
+  "directory": "C:/Projects/ile/cgi/lib/build",
+  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -IC:/Projects/ile/cgi/lib/include -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11 -o CMakeFiles\\cgi.dir\\src\\solver\\solver.c.obj -c C:\\Projects\\ile\\cgi\\lib\\src\\solver\\solver.c",
+  "file": "C:\\Projects\\ile\\cgi\\lib\\src\\solver\\solver.c",
+  "output": "CMakeFiles\\cgi.dir\\src\\solver\\solver.c.obj"
 }
 ]

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Projects/ile/launcher/intro/build",
+  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -g -o CMakeFiles\\intro.dir\\src\\intro.c.obj -c C:\\Projects\\ile\\launcher\\intro\\src\\intro.c",
+  "file": "C:\\Projects\\ile\\launcher\\intro\\src\\intro.c",
+  "output": "CMakeFiles\\intro.dir\\src\\intro.c.obj"
+}
+]

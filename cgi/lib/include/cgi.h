@@ -9,8 +9,6 @@
  * @author   Matvey Rybalkin
 ******************************************************************************/
 
-
-
 /**
  * @brief Main CGI file. Must be called in `int main()`
  * 

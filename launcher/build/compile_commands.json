@@ -1,14 +1,14 @@
 [
 {
-  "directory": "C:/Projects/ile/build",
-  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -IC:/Projects/ile/include -g -std=gnu11 -o CMakeFiles\\ile.dir\\src\\ile.c.obj -c C:\\Projects\\ile\\src\\ile.c",
-  "file": "C:\\Projects\\ile\\src\\ile.c",
+  "directory": "C:/Projects/ile/launcher/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -IC:/Projects/ile/launcher/include -g -std=gnu11 -o CMakeFiles\\ile.dir\\src\\ile.c.obj -c C:\\Projects\\ile\\launcher\\src\\ile.c",
+  "file": "C:\\Projects\\ile\\launcher\\src\\ile.c",
   "output": "CMakeFiles\\ile.dir\\src\\ile.c.obj"
 },
 {
-  "directory": "C:/Projects/ile/build",
-  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -IC:/Projects/ile/include -g -std=gnu11 -o CMakeFiles\\ile.dir\\src\\main.c.obj -c C:\\Projects\\ile\\src\\main.c",
-  "file": "C:\\Projects\\ile\\src\\main.c",
+  "directory": "C:/Projects/ile/launcher/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -IC:/Projects/ile/launcher/include -g -std=gnu11 -o CMakeFiles\\ile.dir\\src\\main.c.obj -c C:\\Projects\\ile\\launcher\\src\\main.c",
+  "file": "C:\\Projects\\ile\\launcher\\src\\main.c",
   "output": "CMakeFiles\\ile.dir\\src\\main.c.obj"
 }
 ]

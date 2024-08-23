@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Projects/ile/lib/build",
+  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -Dile_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11 \"-D ILE_API=__declspec(dllexport)\" -o CMakeFiles\\ile.dir\\src\\lexer.c.obj -c C:\\Projects\\ile\\lib\\src\\lexer.c",
+  "file": "C:\\Projects\\ile\\lib\\src\\lexer.c",
+  "output": "CMakeFiles\\ile.dir\\src\\lexer.c.obj"
+},
+{
+  "directory": "C:/Projects/ile/lib/build",
+  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -Dile_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11 \"-D ILE_API=__declspec(dllexport)\" -o CMakeFiles\\ile.dir\\src\\parser.c.obj -c C:\\Projects\\ile\\lib\\src\\parser.c",
+  "file": "C:\\Projects\\ile\\lib\\src\\parser.c",
+  "output": "CMakeFiles\\ile.dir\\src\\parser.c.obj"
+},
+{
+  "directory": "C:/Projects/ile/lib/build",
+  "command": "C:\\msys64\\mingw64\\bin\\cc.exe -Dile_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11 \"-D ILE_API=__declspec(dllexport)\" -o CMakeFiles\\ile.dir\\src\\solver.c.obj -c C:\\Projects\\ile\\lib\\src\\solver.c",
+  "file": "C:\\Projects\\ile\\lib\\src\\solver.c",
+  "output": "CMakeFiles\\ile.dir\\src\\solver.c.obj"
+}
+]
