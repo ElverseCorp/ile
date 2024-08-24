@@ -21,13 +21,22 @@ static qmath_value_t discriminant(qmath_factors_t factors) {
 static void get_x12_pos(qmath_factors_t factors, qmath_value_t D) {
     qmath_value_t sqrtD = sqrtl(D);
     roots.x1 = (-factors.b - sqrtD) / (2.0L * factors.a);
-    roots.x2 = (2.0L * factors.c) / (-factors.b + sqrtD);
+    if (fabsl(D) < QMATH_EPSILON) {
+        roots.x2 = NAN;
+    } else {
+        roots.x2 = (2.0L * factors.c) / (-factors.b - sqrtD);
+    }
 }
 
 static void get_x12_neg(qmath_factors_t factors, qmath_value_t D) {
     qmath_value_t sqrtD = sqrtl(D);
+    
     roots.x1 = (-factors.b + sqrtD) / (2.0L * factors.a);
-    roots.x2 = (2.0L * factors.c) / (-factors.b - sqrtD);
+    if (fabsl(D) < QMATH_EPSILON) {
+        roots.x2 = NAN;
+    } else {
+        roots.x2 = (2.0L * factors.c) / (-factors.b + sqrtD);
+    }
 }
 
 
@@ -35,7 +44,6 @@ static void get_x12_neg(qmath_factors_t factors, qmath_value_t D) {
 
 /* Fast but takes memory... */
 qmath_roots_t qmath_solve(qmath_factors_t factors) {
-
     if (factors.c == 0.0L) {
         if (factors.b == 0.0L) {
             roots.x1 = 0.0L;
@@ -51,12 +59,17 @@ qmath_roots_t qmath_solve(qmath_factors_t factors) {
             roots.x2 = -x12;
         } else {
             qmath_value_t D = discriminant(factors);
-            
-            if (factors.b < 0.0L) {
-                get_x12_neg(factors, D);
+
+            if (!(D < 0.0L)) {
+                if (factors.b < 0.0L) {
+                    get_x12_neg(factors, D);
+                } else {
+                    get_x12_pos(factors, D);
+                }
             } else {
-                get_x12_pos(factors, D);
+                roots = (qmath_roots_t){NAN, NAN};
             }
+            
         }
     }
     return roots;
