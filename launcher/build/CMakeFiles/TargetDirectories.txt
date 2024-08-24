@@ -1,3 +1,6 @@
 C:/Projects/ile/launcher/build/CMakeFiles/ile.dir
 C:/Projects/ile/launcher/build/CMakeFiles/edit_cache.dir
 C:/Projects/ile/launcher/build/CMakeFiles/rebuild_cache.dir
+C:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir
+C:/Projects/ile/launcher/lib/build/CMakeFiles/edit_cache.dir
+C:/Projects/ile/launcher/lib/build/CMakeFiles/rebuild_cache.dir

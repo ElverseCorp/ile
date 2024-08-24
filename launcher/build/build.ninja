@@ -11,8 +11,8 @@
 # =============================================================================
 
 # =============================================================================
-# Project: ile
-# Configurations: Debug
+# Project: Ile
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -47,19 +47,19 @@ cmake_ninja_workdir = C$:/Projects/ile/launcher/build/
 #############################################
 # Order-only phony target for ile
 
-build cmake_object_order_depends_target_ile: phony || .
+build cmake_object_order_depends_target_ile: phony || cmake_object_order_depends_target_ile_solver
 
-build CMakeFiles/ile.dir/src/ile.c.obj: C_COMPILER__ile_unscanned_Debug C$:/Projects/ile/launcher/src/ile.c || cmake_object_order_depends_target_ile
+build CMakeFiles/ile.dir/src/ile.c.obj: C_COMPILER__ile_unscanned_Release C$:/Projects/ile/launcher/src/ile.c || cmake_object_order_depends_target_ile
   DEP_FILE = CMakeFiles\ile.dir\src\ile.c.obj.d
-  FLAGS = -g -std=gnu11
-  INCLUDES = -IC:/Projects/ile/launcher/include
+  FLAGS = -Wall -Wextra -pedantic -O3 -std=gnu11
+  INCLUDES = -IC:/Projects/ile/launcher/include -IC:/Projects/ile/lib/include
   OBJECT_DIR = CMakeFiles\ile.dir
   OBJECT_FILE_DIR = CMakeFiles\ile.dir\src
 
-build CMakeFiles/ile.dir/src/main.c.obj: C_COMPILER__ile_unscanned_Debug C$:/Projects/ile/launcher/src/main.c || cmake_object_order_depends_target_ile
+build CMakeFiles/ile.dir/src/main.c.obj: C_COMPILER__ile_unscanned_Release C$:/Projects/ile/launcher/src/main.c || cmake_object_order_depends_target_ile
   DEP_FILE = CMakeFiles\ile.dir\src\main.c.obj.d
-  FLAGS = -g -std=gnu11
-  INCLUDES = -IC:/Projects/ile/launcher/include
+  FLAGS = -Wall -Wextra -pedantic -O3 -std=gnu11
+  INCLUDES = -IC:/Projects/ile/launcher/include -IC:/Projects/ile/lib/include
   OBJECT_DIR = CMakeFiles\ile.dir
   OBJECT_FILE_DIR = CMakeFiles\ile.dir\src
 
@@ -71,9 +71,9 @@ build CMakeFiles/ile.dir/src/main.c.obj: C_COMPILER__ile_unscanned_Debug C$:/Pro
 #############################################
 # Link the executable ile.exe
 
-build ile.exe: C_EXECUTABLE_LINKER__ile_Debug CMakeFiles/ile.dir/src/ile.c.obj CMakeFiles/ile.dir/src/main.c.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+build ile.exe: C_EXECUTABLE_LINKER__ile_Release CMakeFiles/ile.dir/src/ile.c.obj CMakeFiles/ile.dir/src/main.c.obj | C$:/Projects/ile/launcher/lib/build/libile_solver.dll.a || C$:/Projects/ile/launcher/lib/build/libile_solver.dll
+  FLAGS = -Wall -Wextra -pedantic -O3
+  LINK_LIBRARIES = C:/Projects/ile/launcher/lib/build/libile_solver.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ile.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -106,9 +106,94 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Projects/ile/launcher/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target ile_solver
+
+
+#############################################
+# Order-only phony target for ile_solver
+
+build cmake_object_order_depends_target_ile_solver: phony || .
+
+build C$:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/parser.c.obj: C_COMPILER__ile_solver_unscanned_Release C$:/Projects/ile/lib/src/parser.c || cmake_object_order_depends_target_ile_solver
+  DEFINES = -Dile_solver_EXPORTS
+  DEP_FILE = C:\Projects\ile\launcher\lib\build\CMakeFiles\ile_solver.dir\src\parser.c.obj.d
+  FLAGS = -Wall -Wextra -pedantic -O3 -std=gnu11
+  INCLUDES = -IC:/Projects/ile/lib/include
+  OBJECT_DIR = C:\Projects\ile\launcher\lib\build\CMakeFiles\ile_solver.dir
+  OBJECT_FILE_DIR = C:\Projects\ile\launcher\lib\build\CMakeFiles\ile_solver.dir\src
+
+build C$:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/solver.c.obj: C_COMPILER__ile_solver_unscanned_Release C$:/Projects/ile/lib/src/solver.c || cmake_object_order_depends_target_ile_solver
+  DEFINES = -Dile_solver_EXPORTS
+  DEP_FILE = C:\Projects\ile\launcher\lib\build\CMakeFiles\ile_solver.dir\src\solver.c.obj.d
+  FLAGS = -Wall -Wextra -pedantic -O3 -std=gnu11
+  INCLUDES = -IC:/Projects/ile/lib/include
+  OBJECT_DIR = C:\Projects\ile\launcher\lib\build\CMakeFiles\ile_solver.dir
+  OBJECT_FILE_DIR = C:\Projects\ile\launcher\lib\build\CMakeFiles\ile_solver.dir\src
+
+build C$:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj: C_COMPILER__ile_solver_unscanned_Release C$:/Projects/ile/lib/src/solver/qmath.c || cmake_object_order_depends_target_ile_solver
+  DEFINES = -Dile_solver_EXPORTS
+  DEP_FILE = C:\Projects\ile\launcher\lib\build\CMakeFiles\ile_solver.dir\src\solver\qmath.c.obj.d
+  FLAGS = -Wall -Wextra -pedantic -O3 -std=gnu11
+  INCLUDES = -IC:/Projects/ile/lib/include
+  OBJECT_DIR = C:\Projects\ile\launcher\lib\build\CMakeFiles\ile_solver.dir
+  OBJECT_FILE_DIR = C:\Projects\ile\launcher\lib\build\CMakeFiles\ile_solver.dir\src\solver
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target ile_solver
+
+
+#############################################
+# Link the shared library C:\Projects\ile\launcher\lib\build\libile_solver.dll
+
+build C$:/Projects/ile/launcher/lib/build/libile_solver.dll C$:/Projects/ile/launcher/lib/build/libile_solver.dll.a: C_SHARED_LIBRARY_LINKER__ile_solver_Release C$:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/parser.c.obj C$:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/solver.c.obj C$:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj
+  LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -pedantic -O3
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = C:\Projects\ile\launcher\lib\build\CMakeFiles\ile_solver.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  RESTAT = 1
+  TARGET_FILE = C:\Projects\ile\launcher\lib\build\libile_solver.dll
+  TARGET_IMPLIB = C:\Projects\ile\launcher\lib\build\libile_solver.dll.a
+  TARGET_PDB = ile_solver.dll.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build C$:/Projects/ile/launcher/lib/build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Projects\ile\launcher\lib\build && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Projects\ile\launcher -BC:\Projects\ile\launcher\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build C$:/Projects/ile/launcher/lib/build/edit_cache: phony C$:/Projects/ile/launcher/lib/build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build C$:/Projects/ile/launcher/lib/build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Projects\ile\launcher\lib\build && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Projects\ile\launcher -BC:\Projects\ile\launcher\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build C$:/Projects/ile/launcher/lib/build/rebuild_cache: phony C$:/Projects/ile/launcher/lib/build/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build ile: phony ile.exe
+
+build ile_solver: phony C$:/Projects/ile/launcher/lib/build/libile_solver.dll
+
+build libile_solver.dll: phony C$:/Projects/ile/launcher/lib/build/libile_solver.dll
 
 # =============================================================================
 # Folder targets.
@@ -118,7 +203,14 @@ build ile: phony ile.exe
 #############################################
 # Folder: C:/Projects/ile/launcher/build
 
-build all: phony ile.exe
+build all: phony ile.exe C$:/Projects/ile/launcher/lib/build/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Projects/ile/launcher/lib/build
+
+build C$:/Projects/ile/launcher/lib/build/all: phony C$:/Projects/ile/launcher/lib/build/libile_solver.dll
 
 # =============================================================================
 # Built-in targets
@@ -127,14 +219,14 @@ build all: phony ile.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Projects/ile/launcher/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.1/CMakeCCompiler.cmake CMakeFiles/3.30.1/CMakeCXXCompiler.cmake CMakeFiles/3.30.1/CMakeRCCompiler.cmake CMakeFiles/3.30.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Projects/ile/launcher/CMakeLists.txt C$:/Projects/ile/lib/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.1/CMakeCCompiler.cmake CMakeFiles/3.30.1/CMakeCXXCompiler.cmake CMakeFiles/3.30.1/CMakeRCCompiler.cmake CMakeFiles/3.30.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Projects/ile/launcher/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.1/CMakeCCompiler.cmake CMakeFiles/3.30.1/CMakeCXXCompiler.cmake CMakeFiles/3.30.1/CMakeRCCompiler.cmake CMakeFiles/3.30.1/CMakeSystem.cmake: phony
+build C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Projects/ile/launcher/CMakeLists.txt C$:/Projects/ile/lib/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.1/CMakeCCompiler.cmake CMakeFiles/3.30.1/CMakeCXXCompiler.cmake CMakeFiles/3.30.1/CMakeRCCompiler.cmake CMakeFiles/3.30.1/CMakeSystem.cmake: phony
 
 
 #############################################

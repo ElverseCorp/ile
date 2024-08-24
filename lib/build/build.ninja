@@ -41,56 +41,56 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Projects/ile/lib/build/
 # =============================================================================
-# Object build statements for SHARED_LIBRARY target ile
+# Object build statements for SHARED_LIBRARY target ile_solver
 
 
 #############################################
-# Order-only phony target for ile
+# Order-only phony target for ile_solver
 
-build cmake_object_order_depends_target_ile: phony || .
+build cmake_object_order_depends_target_ile_solver: phony || .
 
-build CMakeFiles/ile.dir/src/parser.c.obj: C_COMPILER__ile_unscanned_Debug C$:/Projects/ile/lib/src/parser.c || cmake_object_order_depends_target_ile
-  DEFINES = -Dile_EXPORTS
-  DEP_FILE = CMakeFiles\ile.dir\src\parser.c.obj.d
-  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11 "-D ILE_API=__declspec(dllexport)"
+build CMakeFiles/ile_solver.dir/src/parser.c.obj: C_COMPILER__ile_solver_unscanned_Debug C$:/Projects/ile/lib/src/parser.c || cmake_object_order_depends_target_ile_solver
+  DEFINES = -Dile_solver_EXPORTS
+  DEP_FILE = CMakeFiles\ile_solver.dir\src\parser.c.obj.d
+  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11
   INCLUDES = -IC:/Projects/ile/lib/include
-  OBJECT_DIR = CMakeFiles\ile.dir
-  OBJECT_FILE_DIR = CMakeFiles\ile.dir\src
+  OBJECT_DIR = CMakeFiles\ile_solver.dir
+  OBJECT_FILE_DIR = CMakeFiles\ile_solver.dir\src
 
-build CMakeFiles/ile.dir/src/solver.c.obj: C_COMPILER__ile_unscanned_Debug C$:/Projects/ile/lib/src/solver.c || cmake_object_order_depends_target_ile
-  DEFINES = -Dile_EXPORTS
-  DEP_FILE = CMakeFiles\ile.dir\src\solver.c.obj.d
-  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11 "-D ILE_API=__declspec(dllexport)"
+build CMakeFiles/ile_solver.dir/src/solver.c.obj: C_COMPILER__ile_solver_unscanned_Debug C$:/Projects/ile/lib/src/solver.c || cmake_object_order_depends_target_ile_solver
+  DEFINES = -Dile_solver_EXPORTS
+  DEP_FILE = CMakeFiles\ile_solver.dir\src\solver.c.obj.d
+  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11
   INCLUDES = -IC:/Projects/ile/lib/include
-  OBJECT_DIR = CMakeFiles\ile.dir
-  OBJECT_FILE_DIR = CMakeFiles\ile.dir\src
+  OBJECT_DIR = CMakeFiles\ile_solver.dir
+  OBJECT_FILE_DIR = CMakeFiles\ile_solver.dir\src
 
-build CMakeFiles/ile.dir/src/solver/qmath.c.obj: C_COMPILER__ile_unscanned_Debug C$:/Projects/ile/lib/src/solver/qmath.c || cmake_object_order_depends_target_ile
-  DEFINES = -Dile_EXPORTS
-  DEP_FILE = CMakeFiles\ile.dir\src\solver\qmath.c.obj.d
-  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11 "-D ILE_API=__declspec(dllexport)"
+build CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj: C_COMPILER__ile_solver_unscanned_Debug C$:/Projects/ile/lib/src/solver/qmath.c || cmake_object_order_depends_target_ile_solver
+  DEFINES = -Dile_solver_EXPORTS
+  DEP_FILE = CMakeFiles\ile_solver.dir\src\solver\qmath.c.obj.d
+  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11
   INCLUDES = -IC:/Projects/ile/lib/include
-  OBJECT_DIR = CMakeFiles\ile.dir
-  OBJECT_FILE_DIR = CMakeFiles\ile.dir\src\solver
+  OBJECT_DIR = CMakeFiles\ile_solver.dir
+  OBJECT_FILE_DIR = CMakeFiles\ile_solver.dir\src\solver
 
 
 # =============================================================================
-# Link build statements for SHARED_LIBRARY target ile
+# Link build statements for SHARED_LIBRARY target ile_solver
 
 
 #############################################
-# Link the shared library libile.dll
+# Link the shared library libile_solver.dll
 
-build libile.dll libile.dll.a: C_SHARED_LIBRARY_LINKER__ile_Debug CMakeFiles/ile.dir/src/parser.c.obj CMakeFiles/ile.dir/src/solver.c.obj CMakeFiles/ile.dir/src/solver/qmath.c.obj
+build libile_solver.dll libile_solver.dll.a: C_SHARED_LIBRARY_LINKER__ile_solver_Debug CMakeFiles/ile_solver.dir/src/parser.c.obj CMakeFiles/ile_solver.dir/src/solver.c.obj CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj
   LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -pedantic -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\ile.dir
+  OBJECT_DIR = CMakeFiles\ile_solver.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_FILE = libile.dll
-  TARGET_IMPLIB = libile.dll.a
-  TARGET_PDB = ile.dll.dbg
+  TARGET_FILE = libile_solver.dll
+  TARGET_IMPLIB = libile_solver.dll.a
+  TARGET_PDB = ile_solver.dll.dbg
 
 
 #############################################
@@ -119,7 +119,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build ile: phony libile.dll
+build ile_solver: phony libile_solver.dll
 
 # =============================================================================
 # Folder targets.
@@ -129,7 +129,7 @@ build ile: phony libile.dll
 #############################################
 # Folder: C:/Projects/ile/lib/build
 
-build all: phony libile.dll
+build all: phony libile_solver.dll
 
 # =============================================================================
 # Built-in targets

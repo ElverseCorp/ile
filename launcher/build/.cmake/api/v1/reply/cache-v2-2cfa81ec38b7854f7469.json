@@ -43,7 +43,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Debug"
+			"value" : "Release"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Projects/ile/lib/build"
+			"value" : "c:/Projects/ile/launcher/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -571,7 +571,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Projects/ile/lib/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Projects/ile/launcher/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -643,7 +643,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Projects/ile/lib"
+			"value" : "C:/Projects/ile/launcher"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -795,7 +795,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "2"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1270,6 +1270,42 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "Ile Library_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Projects/ile/launcher/lib/build"
+		},
+		{
+			"name" : "Ile Library_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "Ile Library_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Projects/ile/lib"
+		},
+		{
 			"name" : "Ile_BINARY_DIR",
 			"properties" : 
 			[
@@ -1279,7 +1315,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Projects/ile/lib/build"
+			"value" : "C:/Projects/ile/launcher/lib/build"
 		},
 		{
 			"name" : "Ile_IS_TOP_LEVEL",
@@ -1291,7 +1327,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "ON"
+			"value" : "OFF"
 		},
 		{
 			"name" : "Ile_SOURCE_DIR",

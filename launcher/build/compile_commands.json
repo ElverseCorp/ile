@@ -1,14 +1,32 @@
 [
 {
   "directory": "C:/Projects/ile/launcher/build",
-  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -IC:/Projects/ile/launcher/include -g -std=gnu11 -o CMakeFiles\\ile.dir\\src\\ile.c.obj -c C:\\Projects\\ile\\launcher\\src\\ile.c",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -IC:/Projects/ile/launcher/include -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -O3 -std=gnu11 -o CMakeFiles\\ile.dir\\src\\ile.c.obj -c C:\\Projects\\ile\\launcher\\src\\ile.c",
   "file": "C:\\Projects\\ile\\launcher\\src\\ile.c",
   "output": "CMakeFiles\\ile.dir\\src\\ile.c.obj"
 },
 {
   "directory": "C:/Projects/ile/launcher/build",
-  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -IC:/Projects/ile/launcher/include -g -std=gnu11 -o CMakeFiles\\ile.dir\\src\\main.c.obj -c C:\\Projects\\ile\\launcher\\src\\main.c",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -IC:/Projects/ile/launcher/include -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -O3 -std=gnu11 -o CMakeFiles\\ile.dir\\src\\main.c.obj -c C:\\Projects\\ile\\launcher\\src\\main.c",
   "file": "C:\\Projects\\ile\\launcher\\src\\main.c",
   "output": "CMakeFiles\\ile.dir\\src\\main.c.obj"
+},
+{
+  "directory": "C:/Projects/ile/launcher/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -Dile_solver_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -O3 -std=gnu11 -o C:\\Projects\\ile\\launcher\\lib\\build\\CMakeFiles\\ile_solver.dir\\src\\parser.c.obj -c C:\\Projects\\ile\\lib\\src\\parser.c",
+  "file": "C:\\Projects\\ile\\lib\\src\\parser.c",
+  "output": "C:\\Projects\\ile\\launcher\\lib\\build\\CMakeFiles\\ile_solver.dir\\src\\parser.c.obj"
+},
+{
+  "directory": "C:/Projects/ile/launcher/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -Dile_solver_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -O3 -std=gnu11 -o C:\\Projects\\ile\\launcher\\lib\\build\\CMakeFiles\\ile_solver.dir\\src\\solver.c.obj -c C:\\Projects\\ile\\lib\\src\\solver.c",
+  "file": "C:\\Projects\\ile\\lib\\src\\solver.c",
+  "output": "C:\\Projects\\ile\\launcher\\lib\\build\\CMakeFiles\\ile_solver.dir\\src\\solver.c.obj"
+},
+{
+  "directory": "C:/Projects/ile/launcher/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -Dile_solver_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -O3 -std=gnu11 -o C:\\Projects\\ile\\launcher\\lib\\build\\CMakeFiles\\ile_solver.dir\\src\\solver\\qmath.c.obj -c C:\\Projects\\ile\\lib\\src\\solver\\qmath.c",
+  "file": "C:\\Projects\\ile\\lib\\src\\solver\\qmath.c",
+  "output": "C:\\Projects\\ile\\launcher\\lib\\build\\CMakeFiles\\ile_solver.dir\\src\\solver\\qmath.c.obj"
 }
 ]

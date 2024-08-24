@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Projects/ile/launcher/build"
+			"value" : "c:/Projects/ile/lib/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -571,7 +571,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Projects/ile/launcher/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Projects/ile/lib/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -643,7 +643,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Projects/ile/launcher"
+			"value" : "C:/Projects/ile/lib"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -655,7 +655,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/ile"
+			"value" : "C:/Program Files (x86)/Ile Library"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "ile"
+			"value" : "Ile"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1270,19 +1270,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
-		},
-		{
-			"name" : "ile_BINARY_DIR",
+			"name" : "Ile Library_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1291,10 +1279,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Projects/ile/launcher/build"
+			"value" : "C:/Projects/ile/lib/build"
 		},
 		{
-			"name" : "ile_IS_TOP_LEVEL",
+			"name" : "Ile Library_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1306,7 +1294,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "ile_SOURCE_DIR",
+			"name" : "Ile Library_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1315,7 +1303,55 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Projects/ile/launcher"
+			"value" : "C:/Projects/ile/lib"
+		},
+		{
+			"name" : "Ile_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Projects/ile/lib/build"
+		},
+		{
+			"name" : "Ile_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "Ile_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Projects/ile/lib"
+		},
+		{
+			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
 		}
 	],
 	"kind" : "cache",

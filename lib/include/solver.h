@@ -15,12 +15,19 @@
 /* Check C standard */
 #if __STDC_VERSION__ >= 201112L 
 
+/* For DLL */
+#ifdef WIN32
+#define ILE_API __declspec(dllexport)
+#endif
+
 /* Types */
 
-/// @brief Ile library solution formatted text.
+/// @brief Ile library solution formatted text. (UTF-8 encode)
 typedef unsigned char* ile_text_t;
 
 /* Functions */
+
+#include "solver/qmath.h"
 
 /**
  * @brief Solve quardratic equation and returns formatted text.
@@ -30,8 +37,7 @@ typedef unsigned char* ile_text_t;
  * @param[in] text text of the quadratic equation
  * @returns pointer of the formatted text solution
  */
-extern ILE_API ile_text_t ile_qe_solve(ile_text_t text);
-
+extern ILE_API qmath_roots_t ile_qe_solve(qmath_factors_t factors);
 
 #else 
 #error "[Ile][lib]: Solver libraries require at least C 2011 standard"

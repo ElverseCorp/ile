@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "ile::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ile-Debug-159fb2b4a61596f59ef2.json",
-					"name" : "ile",
+					"id" : "ile_solver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ile_solver-Debug-4cb9929a0ce80c3ec0a6.json",
+					"name" : "ile_solver",
 					"projectIndex" : 0
 				}
 			]
