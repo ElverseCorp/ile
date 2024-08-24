@@ -7,7 +7,7 @@
 static qmath_roots_t roots = {NAN, NAN};
 
 static qmath_value_t discriminant(qmath_factors_t factors) {
-    return (factors.b * factors.b) - (4 * factors.a * factors.c);
+    return (factors.b * factors.b) - (4.0L * factors.a * factors.c);
 }
 
 /* for the best accuracy I'll use two fomulas */
@@ -20,14 +20,14 @@ static qmath_value_t discriminant(qmath_factors_t factors) {
 /* Unsafe functions */
 static void get_x12_pos(qmath_factors_t factors, qmath_value_t D) {
     qmath_value_t sqrtD = sqrtl(D);
-    roots.x1 = (-factors.b - sqrtD) / (2 * factors.a);
-    roots.x2 = (2 * factors.c) / (-factors.b + sqrtD);
+    roots.x1 = (-factors.b - sqrtD) / (2.0L * factors.a);
+    roots.x2 = (2.0L * factors.c) / (-factors.b + sqrtD);
 }
 
 static void get_x12_neg(qmath_factors_t factors, qmath_value_t D) {
     qmath_value_t sqrtD = sqrtl(D);
-    roots.x1 = (-factors.b + sqrtD) / (2 * factors.a);
-    roots.x2 = (2 * factors.c) / (-factors.b - sqrtD);
+    roots.x1 = (-factors.b + sqrtD) / (2.0L * factors.a);
+    roots.x2 = (2.0L * factors.c) / (-factors.b - sqrtD);
 }
 
 
@@ -38,10 +38,10 @@ qmath_roots_t qmath_solve(qmath_factors_t factors) {
 
     if (factors.c == 0.0L) {
         if (factors.b == 0.0L) {
-            roots.x1 = 0;
+            roots.x1 = 0.0L;
             roots.x2 = NAN;
         } else {
-            roots.x1 = 0;
+            roots.x1 = 0.0L;
             roots.x2 = -(factors.b / factors.a);
         }
     } else {
