@@ -49,18 +49,10 @@ cmake_ninja_workdir = C$:/Projects/ile/lib/build/
 
 build cmake_object_order_depends_target_ile: phony || .
 
-build CMakeFiles/ile.dir/src/lexer.c.obj: C_COMPILER__ile_unscanned_Debug C$:/Projects/ile/lib/src/lexer.c || cmake_object_order_depends_target_ile
-  DEFINES = -Dile_EXPORTS
-  DEP_FILE = CMakeFiles\ile.dir\src\lexer.c.obj.d
-  FLAGS = -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11 "-D ILE_API=__declspec(dllexport)"
-  INCLUDES = -IC:/Projects/ile/lib/include
-  OBJECT_DIR = CMakeFiles\ile.dir
-  OBJECT_FILE_DIR = CMakeFiles\ile.dir\src
-
 build CMakeFiles/ile.dir/src/parser.c.obj: C_COMPILER__ile_unscanned_Debug C$:/Projects/ile/lib/src/parser.c || cmake_object_order_depends_target_ile
   DEFINES = -Dile_EXPORTS
   DEP_FILE = CMakeFiles\ile.dir\src\parser.c.obj.d
-  FLAGS = -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11 "-D ILE_API=__declspec(dllexport)"
+  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11 "-D ILE_API=__declspec(dllexport)"
   INCLUDES = -IC:/Projects/ile/lib/include
   OBJECT_DIR = CMakeFiles\ile.dir
   OBJECT_FILE_DIR = CMakeFiles\ile.dir\src
@@ -68,10 +60,18 @@ build CMakeFiles/ile.dir/src/parser.c.obj: C_COMPILER__ile_unscanned_Debug C$:/P
 build CMakeFiles/ile.dir/src/solver.c.obj: C_COMPILER__ile_unscanned_Debug C$:/Projects/ile/lib/src/solver.c || cmake_object_order_depends_target_ile
   DEFINES = -Dile_EXPORTS
   DEP_FILE = CMakeFiles\ile.dir\src\solver.c.obj.d
-  FLAGS = -Wall -Wextra -pedantic -g;-DDEBUG -std=gnu11 "-D ILE_API=__declspec(dllexport)"
+  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11 "-D ILE_API=__declspec(dllexport)"
   INCLUDES = -IC:/Projects/ile/lib/include
   OBJECT_DIR = CMakeFiles\ile.dir
   OBJECT_FILE_DIR = CMakeFiles\ile.dir\src
+
+build CMakeFiles/ile.dir/src/solver/qmath.c.obj: C_COMPILER__ile_unscanned_Debug C$:/Projects/ile/lib/src/solver/qmath.c || cmake_object_order_depends_target_ile
+  DEFINES = -Dile_EXPORTS
+  DEP_FILE = CMakeFiles\ile.dir\src\solver\qmath.c.obj.d
+  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11 "-D ILE_API=__declspec(dllexport)"
+  INCLUDES = -IC:/Projects/ile/lib/include
+  OBJECT_DIR = CMakeFiles\ile.dir
+  OBJECT_FILE_DIR = CMakeFiles\ile.dir\src\solver
 
 
 # =============================================================================
@@ -81,8 +81,8 @@ build CMakeFiles/ile.dir/src/solver.c.obj: C_COMPILER__ile_unscanned_Debug C$:/P
 #############################################
 # Link the shared library libile.dll
 
-build libile.dll libile.dll.a: C_SHARED_LIBRARY_LINKER__ile_Debug CMakeFiles/ile.dir/src/lexer.c.obj CMakeFiles/ile.dir/src/parser.c.obj CMakeFiles/ile.dir/src/solver.c.obj
-  LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -pedantic -g;-DDEBUG
+build libile.dll libile.dll.a: C_SHARED_LIBRARY_LINKER__ile_Debug CMakeFiles/ile.dir/src/parser.c.obj CMakeFiles/ile.dir/src/solver.c.obj CMakeFiles/ile.dir/src/solver/qmath.c.obj
+  LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -pedantic -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ile.dir
   POST_BUILD = cd .

@@ -41,6 +41,7 @@ ile_token_type_t token_op_get(char sym) {
 
 /* Checks Russian and Latin symbols */
 ile_token_t token_multibyte_id(char* str) {
+    ile_token_t
     /* 2 bytes seq */
 	if (((*str) & 0xE0) == 0xC0){
         
@@ -55,6 +56,7 @@ ile_token_t token_multibyte_id(char* str) {
 	if (((*str) & 0xF8) == 0xF0){
 
     }
+
 }
 
 /*************************************************************
@@ -87,7 +89,7 @@ ile_lexer_status_t token_get(char* str, ile_token_t** buffer) {
                     // add to symbols table 
                     ++token_index;
                 } else {
-                    token.type = ile_token_op_get(*str);
+                    // token.type = ile_token_op_get(*str);
                     if (token.type != ILE_TOKEN_INVALID) {
                         buffer[token_index]->type = token.type;
                         ++token_index;
