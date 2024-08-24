@@ -52,7 +52,7 @@ qmath_roots_t qmath_solve(qmath_factors_t factors) {
         } else {
             qmath_value_t D = discriminant(factors);
             
-            if (factors.b < 0) {
+            if (factors.b < 0.0L) {
                 get_x12_neg(factors, D);
             } else {
                 get_x12_pos(factors, D);
