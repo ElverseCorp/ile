@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main() {
-    qmath_value_t a = 3.0L, b = -5.0L, c = 2.0L;
+    qmath_value_t a = 0.0L, b = 0.0L, c = 0.0L;
     qmath_equation_t factors = {
         .a = a,
         .b = b,

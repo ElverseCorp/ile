@@ -1,6 +1,6 @@
 
-#ifndef ILE_QMATH_H_
-#define ILE_QMATH_H_
+#ifndef ILE_SHARE_LIBRARY_QMATH_H_
+#define ILE_SHARE_LIBRARY_QMATH_H_
 
 /**************************************************************************//**
  * @file     lexer.h

@@ -4,6 +4,7 @@
         "stdint.h": "c",
         "float.h": "c",
         "solver.h": "c",
-        "qmath.h": "c"
+        "qmath.h": "c",
+        "cmath": "cpp"
     }
 }

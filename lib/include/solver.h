@@ -1,10 +1,10 @@
 
-#ifndef ILE_SOLVER_H_
-#define ILE_SOLVER_H_
+#ifndef ILE_SHARE_LIBRARY_SOLVER_H_
+#define ILE_SHARE_LIBRARY_SOLVER_H_
 
 /**************************************************************************//**
  * @file     solver.h
- * @brief    Project L - Ile application. Solver main header.
+ * @brief    Project L - Ile application. Share library main header.
  * @version  V0.0.1
  * @date     24. Aug 2024
  * @author   Matvey Rybalkin
@@ -15,17 +15,15 @@
 /* Check C standard */
 #if __STDC_VERSION__ >= 201112L 
 
-/* For DLL */
+// For DLL
 #ifdef WIN32
 #define ILE_API __declspec(dllexport)
 #endif
 
-/* Types */
 
 /// @brief Ile library solution formatted text. (UTF-8 encode)
 typedef unsigned char* ile_text_t;
 
-/* Functions */
 
 #include "solver/qmath.h"
 
@@ -43,4 +41,4 @@ extern ILE_API qmath_roots_t ile_qe_solve(qmath_equation_t factors);
 #error "[Ile][lib]: Solver libraries require at least C 2011 standard"
 #endif
 
-#endif // ILE_SOLVER_H_
+#endif // ILE_SHARE_LIBRARY_SOLVER_H_
