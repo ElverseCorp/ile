@@ -10,7 +10,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 set(CMAKE_C_FLAGS "-Wall -Wextra -pedantic")
-# set(CMAKE_C_FLAGS_DEBUG "-g" "-D DEBUG")
+set(CMAKE_C_FLAGS_DEBUG "-D DEBUG")
 set(CMAKE_C_FLAGS_RELEASE "-O3")
 
 

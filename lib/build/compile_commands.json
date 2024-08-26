@@ -1,19 +1,25 @@
 [
 {
   "directory": "C:/Projects/ile/lib/build",
-  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -Dile_solver_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -g -std=gnu11 -o CMakeFiles\\ile_solver.dir\\src\\parser.c.obj -c C:\\Projects\\ile\\lib\\src\\parser.c",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -Dile_solver_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -D DEBUG -std=gnu11 -o CMakeFiles\\ile_solver.dir\\src\\config.c.obj -c C:\\Projects\\ile\\lib\\src\\config.c",
+  "file": "C:\\Projects\\ile\\lib\\src\\config.c",
+  "output": "CMakeFiles\\ile_solver.dir\\src\\config.c.obj"
+},
+{
+  "directory": "C:/Projects/ile/lib/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -Dile_solver_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -D DEBUG -std=gnu11 -o CMakeFiles\\ile_solver.dir\\src\\parser.c.obj -c C:\\Projects\\ile\\lib\\src\\parser.c",
   "file": "C:\\Projects\\ile\\lib\\src\\parser.c",
   "output": "CMakeFiles\\ile_solver.dir\\src\\parser.c.obj"
 },
 {
   "directory": "C:/Projects/ile/lib/build",
-  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -Dile_solver_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -g -std=gnu11 -o CMakeFiles\\ile_solver.dir\\src\\solver.c.obj -c C:\\Projects\\ile\\lib\\src\\solver.c",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -Dile_solver_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -D DEBUG -std=gnu11 -o CMakeFiles\\ile_solver.dir\\src\\solver.c.obj -c C:\\Projects\\ile\\lib\\src\\solver.c",
   "file": "C:\\Projects\\ile\\lib\\src\\solver.c",
   "output": "CMakeFiles\\ile_solver.dir\\src\\solver.c.obj"
 },
 {
   "directory": "C:/Projects/ile/lib/build",
-  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -Dile_solver_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -g -std=gnu11 -o CMakeFiles\\ile_solver.dir\\src\\solver\\qmath.c.obj -c C:\\Projects\\ile\\lib\\src\\solver\\qmath.c",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -Dile_solver_EXPORTS -IC:/Projects/ile/lib/include -Wall -Wextra -pedantic -D DEBUG -std=gnu11 -o CMakeFiles\\ile_solver.dir\\src\\solver\\qmath.c.obj -c C:\\Projects\\ile\\lib\\src\\solver\\qmath.c",
   "file": "C:\\Projects\\ile\\lib\\src\\solver\\qmath.c",
   "output": "CMakeFiles\\ile_solver.dir\\src\\solver\\qmath.c.obj"
 }

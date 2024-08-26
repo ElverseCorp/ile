@@ -49,10 +49,18 @@ cmake_ninja_workdir = C$:/Projects/ile/lib/build/
 
 build cmake_object_order_depends_target_ile_solver: phony || .
 
+build CMakeFiles/ile_solver.dir/src/config.c.obj: C_COMPILER__ile_solver_unscanned_Debug C$:/Projects/ile/lib/src/config.c || cmake_object_order_depends_target_ile_solver
+  DEFINES = -Dile_solver_EXPORTS
+  DEP_FILE = CMakeFiles\ile_solver.dir\src\config.c.obj.d
+  FLAGS = -Wall -Wextra -pedantic -D DEBUG -std=gnu11
+  INCLUDES = -IC:/Projects/ile/lib/include
+  OBJECT_DIR = CMakeFiles\ile_solver.dir
+  OBJECT_FILE_DIR = CMakeFiles\ile_solver.dir\src
+
 build CMakeFiles/ile_solver.dir/src/parser.c.obj: C_COMPILER__ile_solver_unscanned_Debug C$:/Projects/ile/lib/src/parser.c || cmake_object_order_depends_target_ile_solver
   DEFINES = -Dile_solver_EXPORTS
   DEP_FILE = CMakeFiles\ile_solver.dir\src\parser.c.obj.d
-  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11
+  FLAGS = -Wall -Wextra -pedantic -D DEBUG -std=gnu11
   INCLUDES = -IC:/Projects/ile/lib/include
   OBJECT_DIR = CMakeFiles\ile_solver.dir
   OBJECT_FILE_DIR = CMakeFiles\ile_solver.dir\src
@@ -60,7 +68,7 @@ build CMakeFiles/ile_solver.dir/src/parser.c.obj: C_COMPILER__ile_solver_unscann
 build CMakeFiles/ile_solver.dir/src/solver.c.obj: C_COMPILER__ile_solver_unscanned_Debug C$:/Projects/ile/lib/src/solver.c || cmake_object_order_depends_target_ile_solver
   DEFINES = -Dile_solver_EXPORTS
   DEP_FILE = CMakeFiles\ile_solver.dir\src\solver.c.obj.d
-  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11
+  FLAGS = -Wall -Wextra -pedantic -D DEBUG -std=gnu11
   INCLUDES = -IC:/Projects/ile/lib/include
   OBJECT_DIR = CMakeFiles\ile_solver.dir
   OBJECT_FILE_DIR = CMakeFiles\ile_solver.dir\src
@@ -68,7 +76,7 @@ build CMakeFiles/ile_solver.dir/src/solver.c.obj: C_COMPILER__ile_solver_unscann
 build CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj: C_COMPILER__ile_solver_unscanned_Debug C$:/Projects/ile/lib/src/solver/qmath.c || cmake_object_order_depends_target_ile_solver
   DEFINES = -Dile_solver_EXPORTS
   DEP_FILE = CMakeFiles\ile_solver.dir\src\solver\qmath.c.obj.d
-  FLAGS = -Wall -Wextra -pedantic -g -std=gnu11
+  FLAGS = -Wall -Wextra -pedantic -D DEBUG -std=gnu11
   INCLUDES = -IC:/Projects/ile/lib/include
   OBJECT_DIR = CMakeFiles\ile_solver.dir
   OBJECT_FILE_DIR = CMakeFiles\ile_solver.dir\src\solver
@@ -81,8 +89,8 @@ build CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj: C_COMPILER__ile_solver_u
 #############################################
 # Link the shared library libile_solver.dll
 
-build libile_solver.dll libile_solver.dll.a: C_SHARED_LIBRARY_LINKER__ile_solver_Debug CMakeFiles/ile_solver.dir/src/parser.c.obj CMakeFiles/ile_solver.dir/src/solver.c.obj CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj
-  LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -pedantic -g
+build libile_solver.dll libile_solver.dll.a: C_SHARED_LIBRARY_LINKER__ile_solver_Debug CMakeFiles/ile_solver.dir/src/config.c.obj CMakeFiles/ile_solver.dir/src/parser.c.obj CMakeFiles/ile_solver.dir/src/solver.c.obj CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj
+  LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -pedantic -D DEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ile_solver.dir
   POST_BUILD = cd .

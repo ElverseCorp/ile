@@ -1,6 +1,5 @@
 
 #include <solver/qmath.h>
-#define DEBUG
 #include <config.h>
 
 /*************************************************************
@@ -38,7 +37,7 @@ static void solve_complete_eq(qmath_roots_t* roots, qmath_equation_t equation) {
  ************************************************************/
 
 qmath_roots_t qmath_solve(qmath_equation_t equation) {
-
+    ILE_LOG_STDOUT_INIT();
     qmath_roots_t result = {NAN, NAN};
 
     if (equation.c == 0.0L) {
@@ -67,6 +66,7 @@ qmath_roots_t qmath_solve(qmath_equation_t equation) {
         }
     }
     ILE_LOG("[qmath.c]: Roots = (%Lf, %Lf) \n", result.x1, result.x2);
+    ILE_LOG_DEINIT();
     return result;
 }
 
