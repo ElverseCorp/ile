@@ -24,35 +24,31 @@ typedef long double qmath_value_t;
 
 #define QMATH_EPSILON LDBL_EPSILON
 
-/// @brief Type of solved quadratic equation.
-typedef enum {
-    ILE_QMATH_NO_ROOTS = 0,
-    ILE_QMATH_1_ROOT = 1,
-    ILE_QMATH_2_ROOTS = 2,
-} qmath_num_roots_t;
-
-/// @brief Quadratic equation 
+/// @brief Quadratic equation roots type.
 typedef struct {
     qmath_value_t x1, x2;
 } qmath_roots_t;
 
-/// @brief Quadratic equation factors.
+/// @brief Quadratic equation type.
 typedef struct {
     qmath_value_t a, b, c;
-} qmath_factors_t;
+} qmath_equation_t;
 
 /**
- * @brief Solve quadratic equation based on input attributes.
+ * @brief Solve quadratic equation.
  * 
  * If there are two roots, then two fields of the structure
  * contain values ​​different from `NAN`, if there is one root,
  * then only the first contains the correct value, if there are
- * no roots, then both `NAN` values ​​are returned. If there are an
- * infinite number of roots, then both values ​​will be equal to `INF`.
+ * no roots, then both `NAN` values ​​are returned.
+ *
+ * `equation` argument contains:
+ *      `.a`, `.b`, `.c` fields of the equation in format:
+ *      `ax^2 + bx + c = 0`
  * 
- * @param[out] factors factors of the quadratic equation
- * @return structure of roots 
+ * @param[out] equation quadratic equation struct.
+ * @return Roots of the equation.
  */
-extern qmath_roots_t qmath_solve(qmath_factors_t factors);
+extern qmath_roots_t qmath_solve(qmath_equation_t equation);
 
 #endif // ILE_QMATH_H_

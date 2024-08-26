@@ -1,23 +1,9 @@
 # ninja log v6
 3	44	7462102949850960	C:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/parser.c.obj	a7789207d42b722a
 12	55	7462102949935936	CMakeFiles/ile.dir/src/ile.c.obj	699bb01dcc031209
-6	65	7462102949850960	C:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/solver.c.obj	a9c8453ffe0a36b1
-15	77	7462102949973055	CMakeFiles/ile.dir/src/main.c.obj	c5d172250781d926
-8	83	7462102949905928	C:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj	fc83fb602550aacb
-83	144	7462102951094929	C:/Projects/ile/launcher/lib/build/libile_solver.dll	be0ae6237601d74a
-83	144	7462102951094929	C:/Projects/ile/launcher/lib/build/libile_solver.dll.a	be0ae6237601d74a
-144	212	7462102951261375	ile.exe	db1c24ac3ad8cda9
-15	62	7462103788191102	C:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj	fc83fb602550aacb
-62	123	7462103789131733	C:/Projects/ile/launcher/lib/build/libile_solver.dll	be0ae6237601d74a
-62	123	7462103789131733	C:/Projects/ile/launcher/lib/build/libile_solver.dll.a	be0ae6237601d74a
-123	188	7462103789272524	ile.exe	db1c24ac3ad8cda9
-5	56	7462104197634865	CMakeFiles/ile.dir/src/main.c.obj	c5d172250781d926
-56	126	7462104198236998	ile.exe	db1c24ac3ad8cda9
-17	70	7462108181040538	C:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj	fc83fb602550aacb
-70	143	7462108182240364	C:/Projects/ile/launcher/lib/build/libile_solver.dll	be0ae6237601d74a
-70	143	7462108182240364	C:/Projects/ile/launcher/lib/build/libile_solver.dll.a	be0ae6237601d74a
-143	224	7462108182300222	ile.exe	db1c24ac3ad8cda9
 17	70	7462108818402471	C:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/solver/qmath.c.obj	fc83fb602550aacb
-71	135	7462108819522653	C:/Projects/ile/launcher/lib/build/libile_solver.dll	be0ae6237601d74a
+6	65	7462102949850960	C:/Projects/ile/launcher/lib/build/CMakeFiles/ile_solver.dir/src/solver.c.obj	a9c8453ffe0a36b1
 71	135	7462108819522653	C:/Projects/ile/launcher/lib/build/libile_solver.dll.a	be0ae6237601d74a
+5	56	7462104197634865	CMakeFiles/ile.dir/src/main.c.obj	c5d172250781d926
 135	206	7462108819582478	ile.exe	db1c24ac3ad8cda9
+71	135	7462108819522653	C:/Projects/ile/launcher/lib/build/libile_solver.dll	be0ae6237601d74a

@@ -37,7 +37,7 @@ typedef unsigned char* ile_text_t;
  * @param[in] text text of the quadratic equation
  * @returns pointer of the formatted text solution
  */
-extern ILE_API qmath_roots_t ile_qe_solve(qmath_factors_t factors);
+extern ILE_API qmath_roots_t ile_qe_solve(qmath_equation_t factors);
 
 #else 
 #error "[Ile][lib]: Solver libraries require at least C 2011 standard"
