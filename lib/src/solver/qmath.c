@@ -39,7 +39,6 @@ static void solve_complete_eq(qmath_roots_t* roots, qmath_equation_t equation) {
 qmath_roots_t qmath_solve(qmath_equation_t equation) {
     ILE_LOG_STDOUT_INIT();
     qmath_roots_t result = {NAN, NAN};
-
     if (equation.c == 0.0L) {
         if (equation.b == 0.0L) {
             if (equation.a == 0.0L) {

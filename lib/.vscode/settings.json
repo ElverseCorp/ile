@@ -5,6 +5,8 @@
         "float.h": "c",
         "solver.h": "c",
         "qmath.h": "c",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "math.h": "c",
+        "config.h": "c"
     }
 }

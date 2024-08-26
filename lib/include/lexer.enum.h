@@ -10,8 +10,7 @@
  * @author   Matvey Rybalkin
 ******************************************************************************/
 
-/* Tokens */
-
+/// @brief List of tokens ID.
 typedef enum {
 
     /* Operators */
@@ -29,10 +28,6 @@ typedef enum {
     ILE_TOKEN_INVALID = 0xFF, // for errors 
 } ile_token_type_t;
 
-
-/* Types */
-
-/// @brief  Token type
 typedef struct {
     ile_token_type_t type;  // type of token
     char* value;            // value

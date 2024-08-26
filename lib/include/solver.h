@@ -4,7 +4,7 @@
 
 /**************************************************************************//**
  * @file     solver.h
- * @brief    Project L - Ile application. Share library main header.
+ * @brief    Project L - Ile application. Share library main.
  * @version  V0.0.1
  * @date     24. Aug 2024
  * @author   Matvey Rybalkin
@@ -24,8 +24,9 @@
 /// @brief Ile library solution formatted text. (UTF-8 encode)
 typedef unsigned char* ile_text_t;
 
-
+// temporary headers
 #include "solver/qmath.h"
+#include "util/transform.h"
 
 /**
  * @brief Solve quardratic equation and returns formatted text.
